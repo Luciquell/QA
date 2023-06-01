@@ -1,0 +1,87 @@
+{\rtf1\ansi\ansicpg1251\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red39\green40\blue50;\red42\green49\blue64;\red245\green245\blue246;
+}
+{\*\expandedcolortbl;;\cssrgb\c20392\c20784\c25490;\cssrgb\c21569\c25490\c31765;\cssrgb\c96863\c96863\c97255;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \expnd0\expndtw0\kerning0
+\uc0\u1047 \u1072 \u1076 \u1072 \u1085 \u1080 \u1077 .\
+\uc0\u1057 \u1086 \u1079 \u1076 \u1072 \u1090 \u1100  \u1087 \u1088 \u1086 \u1077 \u1082 \u1090  \u1085 \u1072  Java, \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1081  \u1073 \u1091 \u1076 \u1077 \u1090  \u1079 \u1072 \u1087 \u1091 \u1089 \u1082 \u1072 \u1090 \u1100  5 \u1090 \u1077 \u1089 \u1090 \u1086 \u1074  \u1085 \u1072  Selenide.\
+\
+1. \uc0\u1055 \u1088 \u1086 \u1074 \u1077 \u1088 \u1080 \u1090 \u1100  \u1087 \u1086 \u1080 \u1089 \u1082  \u1085 \u1072  \u1089 \u1072 \u1081 \u1090 \u1077  wikipedia.org \
+2. \uc0\u1053 \u1072  \u1089 \u1090 \u1088 \u1072 \u1085 \u1080 \u1094 \u1077  "\u1055 \u1088 \u1086 \u1089 \u1084 \u1086 \u1090 \u1088 \u1072  \u1082 \u1086 \u1076 \u1072 " \u1087 \u1088 \u1086 \u1074 \u1077 \u1088 \u1080 \u1090 \u1100  \u1085 \u1072 \u1083 \u1080 \u1095 \u1080 \u1077  \u1088 \u1072 \u1073 \u1086 \u1095 \u1077 \u1081  \u1089 \u1089 \u1099 \u1083 \u1082 \u1080  \u1076 \u1083 \u1103  \u1074 \u1086 \u1079 \u1074 \u1088 \u1072 \u1090 \u1072  \u1082  "\u1047 \u1072 \u1075 \u1083 \u1072 \u1074 \u1085 \u1086 \u1081  \u1089 \u1090 \u1088 \u1072 \u1085 \u1080 \u1094 \u1077 ".\
+3. \uc0\u1057 \u1090 \u1072 \u1090 \u1100 \u1103  \u1089 \u1086 \u1089 \u1090 \u1086 \u1080 \u1090  \u1080 \u1079  \u1087 \u1072 \u1088 \u1072 \u1075 \u1088 \u1072 \u1092 \u1086 \u1074 \
+4. \uc0\u1051 \u1102 \u1073 \u1072 \u1103  \u1089 \u1090 \u1072 \u1090 \u1100 \u1103  \u1076 \u1086 \u1083 \u1078 \u1085 \u1072  \u1080 \u1084 \u1077 \u1090 \u1100  \u1089 \u1086 \u1076 \u1077 \u1088 \u1078 \u1072 \u1085 \u1080 \u1077  \
+5. \uc0\u1057 \u1084 \u1077 \u1085 \u1080 \u1090 \u1100  \u1103 \u1079 \u1099 \u1082  \u1085 \u1072  \u1089 \u1090 \u1088 \u1072 \u1085 \u1080 \u1094 \u1077 \
+\
+\uc0\u1056 \u1077 \u1096 \u1077 \u1085 \u1080 \u1077 :\
+\pard\pardeftab720\partightenfactor0
+\cf3 \cb4 \uc0\u1057 \u1086 \u1079 \u1076 \u1072 \u1083  \u1082 \u1083 \u1072 \u1089 \u1089  \u1076 \u1083 \u1103  \u1090 \u1077 \u1089 \u1090 \u1072 , SelenideTests: \
+\pard\pardeftab708\ri-618\sl360\slmult1\qj\partightenfactor0
+
+\f1 \cf0 \cb1 \kerning1\expnd0\expndtw0  \
+\pard\pardeftab708\ri-618\partightenfactor0
+\cf0 import com.codeborne.selenide.Condition;\
+import com.codeborne.selenide.Configuration;\
+import org.junit.jupiter.api.BeforeAll;\
+import org.junit.jupiter.api.Test;\
+\
+import static com.codeborne.selenide.Selenide.*;\
+\
+public class SelenideTests \{\
+\
+    @BeforeAll\
+    public static void setup() \{\
+\pard\pardeftab708\ri-618\partightenfactor0
+
+\f2 \cf0         // \uc0\u1059 \u1089 \u1090 \u1072 \u1085 \u1086 \u1074 \u1082 \u1072  \u1085 \u1072 \u1089 \u1090 \u1088 \u1086 \u1077 \u1082  Selenide\
+        Configuration.startMaximized = true; // \uc0\u1054 \u1090 \u1082 \u1088 \u1099 \u1090 \u1100  \u1073 \u1088 \u1072 \u1091 \u1079 \u1077 \u1088  \u1074  \u1087 \u1086 \u1083 \u1085 \u1086 \u1101 \u1082 \u1088 \u1072 \u1085 \u1085 \u1086 \u1084  \u1088 \u1077 \u1078 \u1080 \u1084 \u1077 \
+\pard\pardeftab708\ri-618\partightenfactor0
+
+\f1 \cf0         Configuration.baseUrl 
+\f2 = "https://www.wikipedia.org"; // \uc0\u1059 \u1089 \u1090 \u1072 \u1085 \u1086 \u1074 \u1082 \u1072  \u1073 \u1072 \u1079 \u1086 \u1074 \u1086 \u1075 \u1086  URL \u1076 \u1083 \u1103  \u1090 \u1077 \u1089 \u1090 \u1086 \u1074 \
+
+\f1     \}\
+\
+    @Test\
+    public void testWikipediaSearch() \{\
+        open("/");\
+        $("#searchInput").setValue(\'abTEST\'bb).pressEnter();\
+        $("#firstHeading").shouldHave(Condition.text(\'abTEST));\
+    \}\
+\
+    @Test\
+    public void testCodeViewPage() \{\
+        open("/wiki/Special:Code");\
+\pard\pardeftab708\ri-618\partightenfactor0
+
+\f2 \cf0         $("#ca-nstab-main").shouldHave(Condition.text("\uc0\u1047 \u1072 \u1075 \u1083 \u1072 \u1074 \u1085 \u1072 \u1103  \u1089 \u1090 \u1088 \u1072 \u1085 \u1080 \u1094 \u1072 "));\
+\pard\pardeftab708\ri-618\partightenfactor0
+
+\f1 \cf0     \}\
+\
+    @Test\
+    public void testArticleParagraphs() \{\
+        open("/wiki/Java");\
+        $(".mw-parser-output").$$("p").shouldHaveSizeGreaterThan(0);\
+    \}\
+\
+    @Test\
+    public void testArticleContents() \{\
+        open("/wiki/Java");\
+        $("#toc").should(Condition.exist);\
+    \}\
+\
+    @Test\
+    public void testChangeLanguage() \{\
+        open("/");\
+        $(".central-featured-lang").click();\
+        $("#js-lang-list").should(Condition.appear);\
+    \}\
+\}\
+}
