@@ -1,11 +1,11 @@
-Задание.
-Создать проект на Java, который будет запускать 5 тестов на Selenide.
+// Задание.
+// Создать проект на Java, который будет запускать 5 тестов на Selenide.
 
-1. Проверить поиск на сайте wikipedia.org 
-2. На странице "Просмотра кода" проверить наличие рабочей ссылки для возврата к "Заглавной странице".
-3. Статья состоит из параграфов
-4. Любая статья должна иметь содержание 
-5. Сменить язык на странице
+// 1. Проверить поиск на сайте wikipedia.org 
+// 2. На странице "Просмотра кода" проверить наличие рабочей ссылки для возврата к "Заглавной странице".
+// 3. Статья состоит из параграфов
+// 4. Любая статья должна иметь содержание 
+// 5. Сменить язык на странице
 
 Решение:
 Создал класс для теста, SelenideTests: 
@@ -16,7 +16,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.*;
-
 public class SelenideTests {
 
     @BeforeAll
@@ -25,32 +24,32 @@ public class SelenideTests {
         Configuration.startMaximized = true; // Открыть браузер в полноэкранном режиме
         Configuration.baseUrl = "https://www.wikipedia.org"; // Установка базового URL для тестов
     }
-
+// 1. Проверить поиск на сайте wikipedia.org 
     @Test
     public void testWikipediaSearch() {
         open("/");
         $("#searchInput").setValue(«TEST»).pressEnter();
         $("#firstHeading").shouldHave(Condition.text(«TEST));
     }
-
+// 2. На странице "Просмотра кода" проверить наличие рабочей ссылки для возврата к "Заглавной странице".
     @Test
     public void testCodeViewPage() {
         open("/wiki/Special:Code");
         $("#ca-nstab-main").shouldHave(Condition.text("Заглавная страница"));
     }
-
+// 3. Статья состоит из параграфов
     @Test
     public void testArticleParagraphs() {
         open("/wiki/Java");
         $(".mw-parser-output").$$("p").shouldHaveSizeGreaterThan(0);
     }
-
+// 4. Любая статья должна иметь содержание 
     @Test
     public void testArticleContents() {
         open("/wiki/Java");
         $("#toc").should(Condition.exist);
     }
-
+// 5. Сменить язык на странице
     @Test
     public void testChangeLanguage() {
         open("/");
