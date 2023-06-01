@@ -1,0 +1,60 @@
+Задание.
+Создать проект на Java, который будет запускать 5 тестов на Selenide.
+
+1. Проверить поиск на сайте wikipedia.org 
+2. На странице "Просмотра кода" проверить наличие рабочей ссылки для возврата к "Заглавной странице".
+3. Статья состоит из параграфов
+4. Любая статья должна иметь содержание 
+5. Сменить язык на странице
+
+Решение:
+Создал класс для теста, SelenideTests: 
+ 
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import static com.codeborne.selenide.Selenide.*;
+
+public class SelenideTests {
+
+    @BeforeAll
+    public static void setup() {
+        // Установка настроек Selenide
+        Configuration.startMaximized = true; // Открыть браузер в полноэкранном режиме
+        Configuration.baseUrl = "https://www.wikipedia.org"; // Установка базового URL для тестов
+    }
+
+    @Test
+    public void testWikipediaSearch() {
+        open("/");
+        $("#searchInput").setValue(«TEST»).pressEnter();
+        $("#firstHeading").shouldHave(Condition.text(«TEST));
+    }
+
+    @Test
+    public void testCodeViewPage() {
+        open("/wiki/Special:Code");
+        $("#ca-nstab-main").shouldHave(Condition.text("Заглавная страница"));
+    }
+
+    @Test
+    public void testArticleParagraphs() {
+        open("/wiki/Java");
+        $(".mw-parser-output").$$("p").shouldHaveSizeGreaterThan(0);
+    }
+
+    @Test
+    public void testArticleContents() {
+        open("/wiki/Java");
+        $("#toc").should(Condition.exist);
+    }
+
+    @Test
+    public void testChangeLanguage() {
+        open("/");
+        $(".central-featured-lang").click();
+        $("#js-lang-list").should(Condition.appear);
+    }
+}
